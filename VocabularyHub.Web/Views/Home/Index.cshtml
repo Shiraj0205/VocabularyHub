@@ -1,0 +1,64 @@
+﻿@model VocabularyHub.Common.ViewModels.VocabulariesViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (var item in Model.Vocabularies)
+{
+    <br />
+    <div class="card">
+        <div class="card-header">
+            <h5>@item.Name - @item.Meaning</h5>
+        </div>
+        <div class="card-body">
+
+            <div class="card-text">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Synonym</label>
+                    <div class="col-sm-10">
+                        <label class="col-form-label">@item.Synonym</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-text">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Antonym</label>
+                    <div class="col-sm-10">
+                        <label class="col-form-label">@item.Antonym</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-text">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Speech Part</label>
+                    <div class="col-sm-10">
+                        <label class="col-form-label">@item.SpeechPartName</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-text row">
+                <label class="col-sm-2 col-form-label">Sentences</label>
+                <div class="col-sm-10">
+                    @foreach (var sentence in item.Sentences)
+                    {
+                        <label class="col-form-label">@sentence.SentenceExample</label>
+                    }
+                </div>
+            </div>
+            <div class="card-text">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Topic</label>
+                    <div class="col-sm-10">
+                        <label class="col-form-label">@item.TopicName</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+

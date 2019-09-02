@@ -1,0 +1,9 @@
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\bin\Debug\netstandard2.0\VocabularyHub.Common.deps.json
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\bin\Debug\netstandard2.0\VocabularyHub.Common.dll
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\bin\Debug\netstandard2.0\VocabularyHub.Common.pdb
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\obj\Debug\netstandard2.0\VocabularyHub.Common.csprojAssemblyReference.cache
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\obj\Debug\netstandard2.0\VocabularyHub.Common.csproj.CoreCompileInputs.cache
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\obj\Debug\netstandard2.0\VocabularyHub.Common.AssemblyInfoInputs.cache
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\obj\Debug\netstandard2.0\VocabularyHub.Common.AssemblyInfo.cs
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\obj\Debug\netstandard2.0\VocabularyHub.Common.dll
+E:\Data\Projects\VocabularyHub\VocabularyHub.Common\obj\Debug\netstandard2.0\VocabularyHub.Common.pdb

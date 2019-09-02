@@ -1,0 +1,14 @@
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Application.deps.json
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Application.dll
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Application.pdb
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.csproj.CoreCompileInputs.cache
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.AssemblyInfoInputs.cache
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.AssemblyInfo.cs
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.dll
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.pdb
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Persistence.dll
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Persistence.pdb
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.csprojAssemblyReference.cache
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\obj\Debug\netcoreapp2.0\VocabularyHub.Application.csproj.CopyComplete
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Common.dll
+E:\Data\Projects\VocabularyHub\VocabularyHub.Application\bin\Debug\netcoreapp2.0\VocabularyHub.Common.pdb

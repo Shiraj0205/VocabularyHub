@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VocabularyHub.Common\VocabularyHub.Common.csproj" />
+    <ProjectReference Include="..\VocabularyHub.Persistence\VocabularyHub.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

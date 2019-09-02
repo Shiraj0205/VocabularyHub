@@ -1,0 +1,73 @@
+﻿@model VocabularyHub.Common.ViewModels.AddVocabularyViewModel
+
+@{
+    ViewData["Title"] = "Add Vocabulary";
+}
+
+<h1>Add Vocabulary</h1>
+<form asp-controller="Home" asp-action="SaveVocabulary" method="post">
+    <div class="border border-light" style="padding:20px;">
+        <div class="form-group row">
+            <label asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="Name" placeholder="Name" value="@Model.Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Meaning" class="col-sm-2 col-form-label">Meaning</label>
+            <div class="col-sm-10">
+                <textarea class="form-control z-depth-1" asp-for="Meaning" rows="2" placeholder="Meaning" value="@Model.Meaning"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Synonym" class="col-sm-2 col-form-label">Synonym</label>
+            <div class="col-sm-10">
+                <textarea class="form-control z-depth-1" asp-for="Synonym" rows="2" placeholder="Antonym" value="@Model.Synonym"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Antonym" class="col-sm-2 col-form-label">Antonym</label>
+            <div class="col-sm-10">
+                <textarea class="form-control z-depth-1" asp-for="Antonym" rows="2" placeholder="Antonym" value="@Model.Antonym"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="MarathiMeaning" class="col-sm-2 col-form-label">Marathi Meaning</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="MarathiMeaning" placeholder="Marathi Meaning" value="@Model.MarathiMeaning">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="SpeechPartId" class="col-sm-2 col-form-label">Speech Part</label>
+            <div class="col-sm-4">
+                <select class="form-control" asp-for="SpeechPartId" asp-items="@Model.SpeechPartListItems">
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="TopicId" class="col-sm-2 col-form-label">Topic</label>
+            <div class="col-sm-4">
+                <select class="form-control" asp-for="TopicId" asp-items="@Model.TopicListItems">
+                </select>
+            </div>
+        </div>
+
+        @for (int j = 0; j < Model.Sentences.Count(); j++)
+        {
+            <div class="form-group row">
+                @Html.HiddenFor(x => Model.Sentences[j].Id)
+                <label asp-for="Sentences[@j].SentenceExample" class="col-sm-2 col-form-label">Sentence</label>
+                <div class="col-sm-10">
+                    @*<textarea class="form-control z-depth-1" asp-for="Sentences[@j].SentenceExample" rows="2">Model.Sentences[@j].SentenceExample</textarea>*@
+                    @Html.TextBoxFor(x => Model.Sentences[@j].SentenceExample, new { @class = "form-control" })
+
+                </div>
+            </div>
+        }
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
