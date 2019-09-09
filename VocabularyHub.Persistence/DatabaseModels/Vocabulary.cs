@@ -21,6 +21,8 @@ namespace VocabularyHub.Persistence.DatabaseModels
 
         public string MarathiMeaning { get; set; }
 
+        public int ReadCount { get; set; }
+
         public string CreatedBy { get; set; }
 
         public DateTime CreatedOn { get; set; }

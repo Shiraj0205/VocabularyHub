@@ -29,10 +29,11 @@ namespace VocabularyHub.Persistence.Providers
 
         public VocabulariesViewModel GetVocabularies()
         {
-           var vocabularies = (from vocabulary in _vocabContext.Vocabulary
+            var vocabularies = (from vocabulary in _vocabContext.Vocabulary
                 .Include(t => t.Topic)
                 .Include(s => s.Sentences)
-                    select new VocabularyViewModel
+                               orderby vocabulary.ReadCount
+                               select new VocabularyViewModel
                     {
                         Id = vocabulary.Id,
                         Name = vocabulary.Name,
@@ -55,7 +56,14 @@ namespace VocabularyHub.Persistence.Providers
                         CreatedOn = DateTime.Now,
                         UpdatedBy = _createdBy,
                         UpdatedOn = DateTime.Now
-                    }).ToList();
+                    }).Take(2).ToList();
+
+            // Update ReadCount
+            var vocabIds = vocabularies.Select(v => v.Id).ToArray();
+            var vocabsToUpdateReadCount = _vocabContext.Vocabulary.Where(s => vocabIds.Contains(s.Id)).ToList();
+            vocabsToUpdateReadCount.ForEach(v => v.ReadCount += 1);
+            _vocabContext.SaveChanges();
+
             return new VocabulariesViewModel
             {
                 Vocabularies = vocabularies
@@ -144,6 +152,7 @@ namespace VocabularyHub.Persistence.Providers
                 Synonym = vocabularyViewModel.Synonym,
                 Antonym = vocabularyViewModel.Antonym,
                 MarathiMeaning = vocabularyViewModel.MarathiMeaning,
+                ReadCount = 0,
                 Meaning = vocabularyViewModel.Meaning,
                 Sentences = (from sentence in vocabularyViewModel.Sentences
                              where !string.IsNullOrWhiteSpace(sentence.SentenceExample)

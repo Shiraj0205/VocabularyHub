@@ -12,7 +12,7 @@ namespace VocabularyHub.Api.Controllers
     {
         private readonly IVocabularyManager _vocabularyManager;
 
-        
+
         public VocabularyController(IVocabularyManager vocabularyManager)
         {
             _vocabularyManager = vocabularyManager;
@@ -34,7 +34,7 @@ namespace VocabularyHub.Api.Controllers
             var response = _vocabularyManager.GetVocabularyById(id);
             return Ok(response);
         }
-        
+
         // POST: api/Vocabulary
         [HttpPost]
         public IActionResult Post([FromBody] AddVocabularyViewModel vocabularyViewModel)
@@ -42,13 +42,13 @@ namespace VocabularyHub.Api.Controllers
             var vocabulary = _vocabularyManager.AddVocabulary(vocabularyViewModel);
             return Ok(vocabulary);
         }
-        
+
         // PUT: api/Vocabulary/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
